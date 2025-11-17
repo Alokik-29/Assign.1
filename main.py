@@ -218,4 +218,4 @@ def main(use_ollama: bool):
     interactive_loop(qa_chain)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="AmbedkarGPT - RAG Q&A (converted from Colab noteboo
+    parser = argparse.ArgumentParser(description="AmbedkarGPT - RAG Q&A (converted from Colab notebook)")
