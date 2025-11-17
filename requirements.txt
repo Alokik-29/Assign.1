@@ -1,6 +1,6 @@
 # LangChain (pre-v1, stable APIs, RetrievalQA available)
 langchain==0.1.16
-langchain-community==0.0.31
+langchain-community==0.0.36
 
 # Text splitters (compatible with 0.x)
 langchain-text-splitters==0.0.1
