@@ -21,17 +21,23 @@ import sys
 from typing import Any, Dict
 
 # LangChain core
+# Document loading & splitting
 from langchain_community.document_loaders import TextLoader
 from langchain.text_splitters import CharacterTextSplitter
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import Chroma
+
+# Embeddings & vectorstore (langchain-community provides stable wrappers)
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.vectorstores import Chroma
+
+# Prompt / chain
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 
-# For fallback HF LLM
+# HF pipeline (fallback LLM)
 from langchain.llms import HuggingFacePipeline
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, pipeline
 import torch
+
 
 # Try to import an Ollama wrapper safely (different envs expose different packages)
 OLLAMA_AVAILABLE = False
