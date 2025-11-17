@@ -1,19 +1,10 @@
-# LangChain (pre-v1, stable APIs, RetrievalQA available)
 langchain==0.1.16
 langchain-community==0.0.36
-
-# Text splitters (compatible with 0.x)
 langchain-text-splitters==0.0.1
-
-# Vector DB
 chromadb==0.5.5
-
-# Embeddings / Transformers
 sentence-transformers==2.7.0
 transformers==4.37.2
 torch==2.6.0
 accelerate==0.25.0
 safetensors==0.4.2
 
-# Ollama
-langchain-ollama==0.1.0
