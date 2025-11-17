@@ -2,7 +2,6 @@
 """
 main.py
 
-
 - Loads speech.txt (expects it in the same folder)
 - Splits into chunks (chunk_size=500, overlap=50 like in your notebook)
 - Creates HuggingFaceEmbeddings using sentence-transformers/all-MiniLM-L6-v2
@@ -20,14 +19,25 @@ import argparse
 import sys
 from typing import Any, Dict
 
-# LangChain core
-# Document loading & splitting
-from langchain_community.document_loaders import TextLoader
-from langchain.text_splitter import CharacterTextSplitter
+# Robust imports — work across different LangChain installs
+# Document loader, embeddings, vector store
+try:
+    from langchain_community.document_loaders import TextLoader
+    from langchain_community.embeddings import HuggingFaceEmbeddings
+    from langchain_community.vectorstores import Chroma
+except Exception:
+    from langchain.document_loaders import TextLoader
+    from langchain.embeddings import HuggingFaceEmbeddings
+    from langchain.vectorstores import Chroma
 
-# Embeddings & vectorstore (langchain-community provides stable wrappers)
-from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_community.vectorstores import Chroma
+# Text splitter (different installs expose different modules)
+try:
+    from langchain_text_splitters import CharacterTextSplitter
+except Exception:
+    try:
+        from langchain.text_splitters import CharacterTextSplitter
+    except Exception:
+        from langchain.text_splitter import CharacterTextSplitter
 
 # Prompt / chain
 from langchain.prompts import PromptTemplate
@@ -38,18 +48,15 @@ from langchain.llms import HuggingFacePipeline
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, pipeline
 import torch
 
-
 # Try to import an Ollama wrapper safely (different envs expose different packages)
 OLLAMA_AVAILABLE = False
 OLLAMA_WRAPPER = None
 try:
-    # Preferred wrapper package (install with: pip install langchain-ollama)
     from langchain_ollama import OllamaLLM  # type: ignore
     OLLAMA_AVAILABLE = True
     OLLAMA_WRAPPER = "langchain_ollama"
 except Exception:
     try:
-        # Some langchain versions expose Ollama in langchain.llms
         from langchain.llms import Ollama  # type: ignore
         OLLAMA_AVAILABLE = True
         OLLAMA_WRAPPER = "langchain.llms"
@@ -58,12 +65,12 @@ except Exception:
         OLLAMA_WRAPPER = None
 
 # -----------------------
-# Configuration (matches your Colab notebook)
+# Configuration
 # -----------------------
 SPEECH_FILE = "speech.txt"
-CHUNK_SIZE = 500             # as in your notebook
+CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
-PERSIST_DIR = "./chroma_db"  # same as your notebook
+PERSIST_DIR = "./chroma_db"
 EMBED_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 HF_FALLBACK_MODEL = "google/flan-t5-small"
 TOP_K = 3
@@ -77,12 +84,11 @@ def ensure_speech_file_exists():
 
 def build_chunks() -> Any:
     """
-    Load speech.txt and split into chunks using CharacterTextSplitter (chunk_size=500, overlap=50).
-    Returns list of Document objects (split).
+    Load speech.txt and split into chunks using CharacterTextSplitter.
     """
     ensure_speech_file_exists()
     loader = TextLoader(SPEECH_FILE, encoding="utf-8")
-    documents = loader.load()  # usually a list with one Document
+    documents = loader.load()
     print(f"[INFO] Loaded {len(documents)} document(s). First doc length: {len(documents[0].page_content)} chars")
 
     text_splitter = CharacterTextSplitter(
@@ -96,23 +102,23 @@ def build_chunks() -> Any:
 
 def create_vectorstore(chunks: Any) -> Chroma:
     """
-    Create embeddings using HuggingFaceEmbeddings (MiniLM) and store in Chroma (persist_directory=PERSIST_DIR).
-    Mirrors the Colab cell that created vectorstore = Chroma.from_documents(...)
+    Create embeddings and persist a Chroma vectorstore.
     """
     print("[INFO] Creating embeddings (this may download the model first time)...")
-    # force CPU for embeddings like in your notebook via model_kwargs if needed
     embeddings = HuggingFaceEmbeddings(model_name=EMBED_MODEL, model_kwargs={"device": "cpu"})
     print("[INFO] Creating Chroma vectorstore and persisting to:", PERSIST_DIR)
     vectordb = Chroma.from_documents(documents=chunks, embedding=embeddings, persist_directory=PERSIST_DIR)
-    vectordb.persist()
-    # Avoid accessing private internals; we print the number of chunks we indexed (approx)
-    print(f"[INFO] Vectorstore created. Indexed ~{len(chunks)} vectors (one per chunk).")
+    try:
+        vectordb.persist()
+    except Exception:
+        # some versions persist on creation; ignore if not needed
+        pass
+    print(f"[INFO] Vectorstore created. Indexed ~{len(chunks)} vectors.")
     return vectordb
 
 def make_hf_llm(model_name: str = HF_FALLBACK_MODEL):
     """
     Create a HuggingFace text2text-generation pipeline wrapped for LangChain.
-    This is the fallback used for testing if Ollama isn't available.
     """
     print(f"[INFO] Loading HF fallback model: {model_name} (this may take ~minute).")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -126,26 +132,19 @@ def make_hf_llm(model_name: str = HF_FALLBACK_MODEL):
 
 def make_ollama_llm():
     """
-    Create an Ollama LLM wrapper. This expects Ollama to be installed locally and mistral pulled:
-      curl -fsSL https://ollama.ai/install.sh | sh
-      ollama pull mistral
-
-    Depending on which Python package is available, create the proper wrapper.
+    Create an Ollama LLM wrapper. Expects Ollama installed locally and mistral pulled.
     """
     if not OLLAMA_AVAILABLE:
-        raise RuntimeError("Ollama wrapper not found in Python environment. Install langchain-ollama or ensure your langchain version supports Ollama.")
+        raise RuntimeError("Ollama wrapper not found in Python environment. Install langchain-ollama or use a LangChain version with Ollama support.")
     if OLLAMA_WRAPPER == "langchain_ollama":
-        # OllamaLLM from langchain-ollama
-        return OllamaLLM(model="mistral", temperature=0.2)  # mirrors your notebook temperature setting
+        return OllamaLLM(model="mistral", temperature=0.2)  # type: ignore
     else:
-        # Ollama from langchain.llms
         from langchain.llms import Ollama  # type: ignore
-        return Ollama(model="mistral", temperature=0.2)
+        return Ollama(model="mistral", temperature=0.2)  # type: ignore
 
 def build_qa_chain(vectordb: Chroma, llm) -> RetrievalQA:
     """
-    Construct the RetrievalQA chain using the LLM. This mirrors your notebook which used RetrievalQA.from_chain_type.
-    We build a PromptTemplate like your notebook and pass it via chain_type_kwargs.
+    Construct the RetrievalQA chain using the LLM.
     """
     print("[INFO] Building RetrievalQA chain (chain_type='stuff', return_source_documents=True)")
     prompt_template = """Use the following pieces of context to answer the question at the end.
@@ -157,7 +156,6 @@ Question: {question}
 
 Answer:"""
     PROMPT = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
-
     retriever = vectordb.as_retriever(search_kwargs={"k": TOP_K})
 
     qa_chain = RetrievalQA.from_chain_type(
@@ -168,6 +166,50 @@ Answer:"""
         chain_type_kwargs={"prompt": PROMPT}
     )
     return qa_chain
+
+def _call_qa_chain(qa_chain, question: str):
+    """
+    Robust invocation helper that tries multiple call styles across different LangChain versions.
+    Returns (answer:str, source_docs:list)
+    """
+    # 1) try invoke (preferred for multi-output)
+    try:
+        result = qa_chain.invoke({"query": question})
+        if isinstance(result, dict):
+            answer = result.get("result") or result.get("answer") or result.get("output_text") or ""
+            source_docs = result.get("source_documents") or []
+            return answer, source_docs
+        elif isinstance(result, str):
+            return result, []
+    except Exception:
+        pass
+
+    # 2) try calling chain with dict (many versions support this)
+    try:
+        result = qa_chain({"query": question})
+        if isinstance(result, dict):
+            answer = result.get("result") or result.get("answer") or result.get("output_text") or ""
+            source_docs = result.get("source_documents") or []
+            return answer, source_docs
+        elif isinstance(result, str):
+            return result, []
+    except Exception:
+        pass
+
+    # 3) try run (works only for single-output chains)
+    try:
+        result = qa_chain.run(question)
+        if isinstance(result, str):
+            return result, []
+        elif isinstance(result, dict):
+            answer = result.get("result") or result.get("answer") or ""
+            source_docs = result.get("source_documents") or []
+            return answer, source_docs
+    except Exception:
+        pass
+
+    # fallback
+    return "[ERROR] Could not invoke QA chain (see logs).", []
 
 def interactive_loop(qa_chain: RetrievalQA):
     print("\n[READY] Ask a question (type 'exit' or Ctrl+C to quit).")
@@ -182,20 +224,7 @@ def interactive_loop(qa_chain: RetrievalQA):
         if q.lower() in ("exit", "quit"):
             break
 
-        try:
-            # RetrievalQA.run returns the final answer (and returns_source_documents True means .run still prints answer)
-            result = qa_chain(q)
-            # result is likely a dict if return_source_documents=True (depending on LangChain version). Handle both cases.
-            if isinstance(result, dict):
-                answer = result.get("result") or result.get("answer") or result.get("output_text") or ""
-                source_docs = result.get("source_documents") or result.get("source_documents") or []
-            else:
-                answer = result
-                source_docs = []
-        except Exception as e:
-            answer = f"[ERROR during chain execution] {e}"
-            source_docs = []
-
+        answer, source_docs = _call_qa_chain(qa_chain, q)
         print("\nAnswer:\n", answer)
         if source_docs:
             print("\n-- Source chunks used --")
@@ -225,3 +254,6 @@ def main(use_ollama: bool):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="AmbedkarGPT - RAG Q&A (converted from Colab notebook)")
+    parser.add_argument("--use-ollama", action="store_true", help="Use local Ollama (requires ollama binary and mistral model).")
+    args = parser.parse_args()
+    main(use_ollama=args.use_ollama)
