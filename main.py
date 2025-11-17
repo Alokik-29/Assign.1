@@ -19,51 +19,27 @@ import argparse
 import sys
 from typing import Any, Dict
 
-# Robust imports — work across different LangChain installs
-# Document loader, embeddings, vector store
-try:
-    from langchain_community.document_loaders import TextLoader
-    from langchain_community.embeddings import HuggingFaceEmbeddings
-    from langchain_community.vectorstores import Chroma
-except Exception:
-    from langchain.document_loaders import TextLoader
-    from langchain.embeddings import HuggingFaceEmbeddings
-    from langchain.vectorstores import Chroma
-
-# Text splitter (different installs expose different modules)
-try:
-    from langchain_text_splitters import CharacterTextSplitter
-except Exception:
-    try:
-        from langchain.text_splitters import CharacterTextSplitter
-    except Exception:
-        from langchain.text_splitter import CharacterTextSplitter
-
-# Prompt / chain
-from langchain.prompts import PromptTemplate
-from langchain.chains import RetrievalQA
-
-# HF pipeline (fallback LLM)
-from langchain.llms import HuggingFacePipeline
-from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, pipeline
+# Basic imports
+import os
+import argparse
+import sys
+from typing import Any
 import torch
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, pipeline
 
-# Try to import an Ollama wrapper safely (different envs expose different packages)
-OLLAMA_AVAILABLE = False
-OLLAMA_WRAPPER = None
-try:
-    from langchain_ollama import OllamaLLM  # type: ignore
-    OLLAMA_AVAILABLE = True
-    OLLAMA_WRAPPER = "langchain_ollama"
-except Exception:
-    try:
-        from langchain.llms import Ollama  # type: ignore
-        OLLAMA_AVAILABLE = True
-        OLLAMA_WRAPPER = "langchain.llms"
-    except Exception:
-        OLLAMA_AVAILABLE = False
-        OLLAMA_WRAPPER = None
+# LangChain v1 (clean imports)
+from langchain_community.document_loaders import TextLoader
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.vectorstores import Chroma
+from langchain_text_splitters import CharacterTextSplitter
 
+from langchain_core.prompts import PromptTemplate
+from langchain.chains.retrieval_qa.base import RetrievalQA
+
+from langchain_community.llms import HuggingFacePipeline
+
+# Ollama
+from langchain_ollama import OllamaLLM
 # -----------------------
 # Configuration
 # -----------------------
