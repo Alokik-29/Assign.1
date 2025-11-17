@@ -23,7 +23,7 @@ from typing import Any, Dict
 # LangChain core
 # Document loading & splitting
 from langchain_community.document_loaders import TextLoader
-from langchain.text_splitters import CharacterTextSplitter
+from langchain.text_splitter import CharacterTextSplitter
 
 # Embeddings & vectorstore (langchain-community provides stable wrappers)
 from langchain_community.embeddings import HuggingFaceEmbeddings
