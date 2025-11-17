@@ -2,7 +2,6 @@
 """
 main.py
 
-Converted from the Colab notebook you provided.
 
 - Loads speech.txt (expects it in the same folder)
 - Splits into chunks (chunk_size=500, overlap=50 like in your notebook)
