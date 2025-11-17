@@ -35,7 +35,8 @@ from langchain_community.vectorstores import Chroma
 from langchain_text_splitters import CharacterTextSplitter
 
 from langchain_core.prompts import PromptTemplate
-from langchain.chains.retrieval_qa.base import RetrievalQA
+from langchain_community.chains import RetrievalQA
+
 
 from langchain_community.llms import HuggingFacePipeline
 from langchain_ollama import OllamaLLM
