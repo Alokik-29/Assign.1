@@ -7,3 +7,4 @@ torch==2.1.0
 accelerate==0.25.0
 safetensors==0.4.2
 langchain-ollama==0.1.0
+langchain-text-splitters==0.0.1
