@@ -107,16 +107,8 @@ def make_hf_llm(model_name: str = HF_FALLBACK_MODEL):
     return HuggingFacePipeline(pipeline=pipe)
 
 def make_ollama_llm():
-    """
-    Create an Ollama LLM wrapper. Expects Ollama installed locally and mistral pulled.
-    """
-    if not OLLAMA_AVAILABLE:
-        raise RuntimeError("Ollama wrapper not found in Python environment. Install langchain-ollama or use a LangChain version with Ollama support.")
-    if OLLAMA_WRAPPER == "langchain_ollama":
-        return OllamaLLM(model="mistral", temperature=0.2)  # type: ignore
-    else:
-        from langchain.llms import Ollama  # type: ignore
-        return Ollama(model="mistral", temperature=0.2)  # type: ignore
+    from langchain_ollama import OllamaLLM
+    return OllamaLLM(model="mistral", temperature=0.2)
 
 def build_qa_chain(vectordb: Chroma, llm) -> RetrievalQA:
     """
@@ -214,19 +206,16 @@ def main(use_ollama: bool):
     vectordb = create_vectorstore(chunks)
 
     if use_ollama:
-        print("[INFO] Attempting to initialize Ollama LLM (local).")
-        try:
-            llm = make_ollama_llm()
-            print("[INFO] Ollama initialized successfully.")
-        except Exception as e:
-            print(f"[WARN] Could not initialize Ollama: {e}")
-            print("[INFO] Falling back to HuggingFace model for generation.")
-            llm = make_hf_llm()
+        print("[INFO] Initializing Ollama LLM (local)...")
+        llm = make_ollama_llm()
+        print("[INFO] Ollama initialized successfully.")
     else:
         llm = make_hf_llm()
 
     qa_chain = build_qa_chain(vectordb, llm)
     interactive_loop(qa_chain)
+
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="AmbedkarGPT - RAG Q&A (converted from Colab notebook)")
