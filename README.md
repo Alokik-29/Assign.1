@@ -16,7 +16,6 @@ This repository contains a small Retrieval-Augmented Generation (RAG) prototype 
 - `main.py` — main script (interactive CLI)
 - `speech.txt` — *please include the provided speech.txt in the repo root*
 - `requirements.txt` — dependencies
-- `.gitignore` — recommended ignore patterns
 
 ## Quick start (local machine — recommended for Ollama)
 1. Install Ollama locally and pull the mistral model:
