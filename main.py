@@ -1,6 +1,6 @@
-# LangChain v1 compatible imports
+# --- LangChain v1 compatible imports ---
 
-# Document loader, embeddings, vectorstore
+# Loaders, embeddings, vectorstore
 from langchain_community.document_loaders import TextLoader
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
@@ -8,15 +8,18 @@ from langchain_community.vectorstores import Chroma
 # Text splitter
 from langchain_text_splitters import CharacterTextSplitter
 
-# Core prompts & chains
+# Prompts
 from langchain_core.prompts import PromptTemplate
-from langchain.chains import RetrievalQA
 
-# HuggingFace LLM pipeline wrapper
+# RetrievalQA (moved to community in v1)
+from langchain_community.chains.retrieval import RetrievalQA
+
+# HuggingFace LLM wrapper
 from langchain_community.llms import HuggingFacePipeline
 
 # Ollama LLM
 from langchain_ollama import OllamaLLM
+
 
 
 SPEECH_FILE = "speech.txt"
