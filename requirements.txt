@@ -9,3 +9,8 @@ transformers==4.37.2
 torch==2.6.0
 accelerate==0.25.0
 safetensors==0.4.2
+# Evaluation dependencies
+nltk==3.8.1
+rouge-score==0.1.2
+scikit-learn==1.4.0
+tqdm==4.66.1
