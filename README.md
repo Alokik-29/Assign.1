@@ -1,27 +1,58 @@
-# AmbedkarGPT - Intern Assignment (Kalpit Pvt Ltd)
+# 🧠 AmbedkarGPT — Intern Assignment (Kalpit Pvt Ltd)
 
-This repository contains a small Retrieval-Augmented Generation (RAG) prototype for the Kalpit intern assignment.
+This repository contains a **Retrieval-Augmented Generation (RAG)** prototype built for the **Kalpit Pvt Ltd internship assignment**.  
+The system works fully **offline**, using **ChromaDB**, **HuggingFace embeddings**, and optionally **Ollama (Mistral 7B)** for LLM generation.
 
-## What it does
-- Loads `speech.txt` (provided excerpt)
-- Splits text into chunks
-- Creates embeddings with `sentence-transformers/all-MiniLM-L6-v2`
-- Stores embeddings in a local ChromaDB vector store
-- Retrieves context for user questions
-- Generates answers using an LLM:
-  - **Preferred (assignment):** Ollama with Mistral 7B (local)
-  - **Fallback (for testing / Colab):** HuggingFace Flan-T5 model (no API keys)
+---
 
-## Files
-- `main.py` — main script (interactive CLI)
-- `speech.txt` — *please include the provided speech.txt in the repo root*
-- `requirements.txt` — dependencies
+## 📌 What the Project Does
 
-## Quick start (local machine — recommended for Ollama)
-1. Install Ollama locally and pull the mistral model:
-   ```bash
-   # Install Ollama (example)
-   curl -fsSL https://ollama.ai/install.sh | sh
+This RAG pipeline:
 
-   # Pull Mistral 7B
-   ollama pull mistral
+- Loads **speech.txt** (provided Ambedkar speech)
+- Splits text into overlapping chunks
+- Converts text into embeddings using  
+  **sentence-transformers/all-MiniLM-L6-v2**
+- Stores embeddings inside a **local ChromaDB** vector store
+- Retrieves the most relevant context chunks
+- Generates answers using:
+
+### ✔ Preferred (Assignment Requirement)
+**Ollama — Mistral 7B**  
+Runs fully locally — no API keys, no cloud.
+
+### ✔ Fallback (Optional Testing)
+**HuggingFace Flan-T5-Small**  
+Used automatically when `--use-ollama` is not passed.
+
+---
+
+## 📁 Files Overview
+
+| File | Description |
+|------|-------------|
+| **main.py** | Main script (interactive Q&A CLI) |
+| **speech.txt** | Provided Ambedkar speech text |
+| **requirements.txt** | Dependency list |
+| **chroma_db/** | Auto-generated vector store |
+
+---
+
+## 🚀 Quick Start (Local Machine with Ollama)
+
+### **1️⃣ Install Ollama**
+Download from:  
+👉 https://ollama.com/download
+
+**OR (Linux/macOS):**
+```bash
+curl -fsSL https://ollama.ai/install.sh | sh
+model
+
+
+👤 Author
+
+Alokik Gour
+Kalpit Pvt Ltd — Intern Assignment
+GitHub: https://github.com/Alokik-29
+alokikgour29@gmail.com
