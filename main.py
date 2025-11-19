@@ -1,12 +1,15 @@
-import argparse
-from langchain_community.document_loaders import TextLoader
+from langchain.document_loaders import TextLoader
+from langchain.embeddings import HuggingFaceEmbeddings
+from langchain.vectorstores import Chroma
+
 from langchain_text_splitters import CharacterTextSplitter
-from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_community.vectorstores import Chroma
-from langchain_ollama import OllamaLLM
-from langchain.prompts import PromptTemplate
+
+from langchain_core.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 
+from langchain_community.llms import HuggingFacePipeline
+
+from langchain_ollama import OllamaLLM
 
 SPEECH_FILE = "speech.txt"
 EMBED_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
