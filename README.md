@@ -40,7 +40,7 @@ Used automatically when `--use-ollama` is not passed.
 
 ## 🚀 Quick Start (Local Machine with Ollama)
 
-### **1️⃣ Install Ollama**
+1️⃣ Install Ollama**
 Download from:  
 👉 https://ollama.com/download
 
@@ -49,26 +49,26 @@ Download from:
 curl -fsSL https://ollama.ai/install.sh | sh
 model
 
-### **2️⃣ Pull the Mistral Model
+2️⃣ Pull the Mistral Model
 ollama pull mistral
 
-### **3️⃣ Clone the Repository
+3️⃣ Clone the Repository
 
-### **4️⃣ Create Virtual Environment
+4️⃣ Create Virtual Environment
 python -m venv venv
 then Activate it
 
-### **5️⃣ Install Dependencies
+5️⃣ Install Dependencies
 pip install -r requirements.txt
 
-### **▶️ Running the Project
+▶️ Running the Project
 ✔ Using Ollama (Recommended)
 
 Runs fully locally using Mistral 7B:
 
 python main.py --use-ollama
 
-## 🛠 Tech Stack
+🛠 Tech Stack
 - **Python 3.10+**
 - **LangChain** (RAG pipeline)
 - **ChromaDB** (vector store)
@@ -77,7 +77,7 @@ python main.py --use-ollama
 - **Flan-T5-Small** (fallback LLM)
 
 
-##👤 Author
+👤 Author
 
 Alokik Gour
 Kalpit Pvt Ltd — Intern Assignment
