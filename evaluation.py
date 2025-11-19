@@ -1,7 +1,8 @@
 import os
 import json
-import nltk
+import argparse
 from tqdm import tqdm
+import nltk
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 from rouge_score import rouge_scorer
@@ -9,17 +10,17 @@ from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 
 from langchain.text_splitter import CharacterTextSplitter
 from langchain_community.document_loaders import TextLoader
-from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.vectorstores import Chroma
 
 
-# Folder paths and config
+# CONFIG
+
 CORPUS_DIR = "corpus"
-TEST_DATA = "test_dataset.json"
-RESULTS_JSON = "test_results.json"
+TEST_FILE = "test_dataset.json"
+RESULTS_FILE = "test_results.json"
 
-# Three chunk settings to compare
-CHUNK_CONFIGS = {
+CHUNK_SETTINGS = {
     "small": (250, 50),
     "medium": (550, 50),
     "large": (900, 100)
@@ -27,156 +28,170 @@ CHUNK_CONFIGS = {
 
 TOP_K = 3
 
-# Embedding model for cosine similarity
+# Metrics models
 embedder = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
-
-# ROUGE evaluator
 rouge = rouge_scorer.RougeScorer(["rougeL"], use_stemmer=True)
-
-# BLEU tokenizer
 nltk.download("punkt", quiet=True)
 
 
-# Load the dataset of questions
-def load_test_dataset():
-    with open(TEST_DATA, "r", encoding="utf-8") as f:
-        data = json.load(f)
-    return data["test_questions"]
+
+# Load dataset
+
+def load_test_data():
+    with open(TEST_FILE, "r", encoding="utf-8") as f:
+        return json.load(f)["test_questions"]
 
 
-# Build vectorstore for each chunk size
-def build_vectorstore(chunk_size, overlap):
+
+# Build vectorstore
+
+def build_store(chunk_size, overlap):
     docs = []
 
-    for f in sorted(os.listdir(CORPUS_DIR)):
-        if f.endswith(".txt"):
-            loader = TextLoader(os.path.join(CORPUS_DIR, f), encoding="utf-8")
-            docs.extend(loader.load())
+    # Load files
+    for fname in sorted(os.listdir(CORPUS_DIR)):
+        if fname.endswith(".txt"):
+            path = os.path.join(CORPUS_DIR, fname)
+            loader = TextLoader(path, encoding="utf-8")
+            loaded = loader.load()
+            for d in loaded:
+                d.metadata["source"] = fname
+                docs.append(d)
 
     splitter = CharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=overlap)
     chunks = splitter.split_documents(docs)
 
     vectordb = Chroma.from_documents(
         chunks,
-        HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2"),
-        persist_directory=None
+        HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
     )
     return vectordb
 
 
-# Retrieval metrics
-def hit_rate(topk, gold_docs):
-    return 1 if any(doc in topk for doc in gold_docs) else 0
 
-def mrr(topk, gold_docs):
-    for i, d in enumerate(topk, start=1):
-        if d in gold_docs:
+# Metrics
+
+def hit_rate(pred, gold):
+    return 1.0 if any(x in gold for x in pred) else 0.0
+
+def mrr(pred, gold):
+    for i, doc in enumerate(pred, 1):
+        if doc in gold:
             return 1 / i
-    return 0
+    return 0.0
 
-def precision_at_k(topk, gold_docs):
-    count = sum(1 for d in topk if d in gold_docs)
-    return count / len(topk)
+def precision_k(pred, gold):
+    correct = sum(1 for d in pred if d in gold)
+    return correct / len(pred)
 
+def rouge_l(gt, ans):
+    if not ans:
+        return 0.0
+    return rouge.score(gt, ans)["rougeL"].fmeasure
 
-# Answer quality metrics
-def rouge_l(ref, pred):
-    return rouge.score(ref, pred)["rougeL"].fmeasure
-
-def bleu(ref, pred):
+def bleu(gt, ans):
+    if not ans:
+        return 0.0
     smoothie = SmoothingFunction().method1
-    return sentence_bleu([ref.split()], pred.split(), smoothing_function=smoothie)
+    return sentence_bleu([gt.split()], ans.split(), smoothing_function=smoothie)
 
-def cosine_sim(ref, pred):
-    a = embedder.encode([ref])[0]
-    b = embedder.encode([pred])[0]
-    return cosine_similarity([a], [b])[0][0]
+def cosine(gt, ans):
+    if not ans:
+        return 0.0
+    a = embedder.encode([gt])[0]
+    b = embedder.encode([ans])[0]
+    return float(cosine_similarity([a], [b])[0][0])
 
 
-# Load local Mistral if available, otherwise Flan-T5
-def load_llm():
-    try:
+
+# Load LLM (simple)
+
+def load_llm(use_ollama):
+    if use_ollama:
         from langchain_ollama import OllamaLLM
-        print("Using OLLAMA (mistral)")
         return OllamaLLM(model="mistral")
-    except:
+    else:
         from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, pipeline
-        print("Using HF fallback (flan-t5-small)")
         tok = AutoTokenizer.from_pretrained("google/flan-t5-small")
         model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-small")
         pipe = pipeline("text2text-generation", model=model, tokenizer=tok)
-        return lambda x: pipe(x)[0]["generated_text"]
+        return lambda p: pipe(p)[0]["generated_text"]
 
 
-# Full evaluation loop
-def evaluate():
-    questions = load_test_dataset()
-    llm = load_llm()
 
-    final_results = {}
+# Main evaluation
 
-    for name, (chunk_size, overlap) in CHUNK_CONFIGS.items():
-        print(f"\nEvaluating chunk size: {name}")
+def evaluate(use_ollama=False):
+    data = load_test_data()
+    llm = load_llm(use_ollama)
 
-        vectordb = build_vectorstore(chunk_size, overlap)
+    final = {}
+
+    for name, (chunk_size, overlap) in CHUNK_SETTINGS.items():
+        print(f"\nRunning: {name} chunks...")
+        vectordb = build_store(chunk_size, overlap)
         retriever = vectordb.as_retriever(search_kwargs={"k": TOP_K})
 
-        config_results = []
+        results = []
 
-        for q in tqdm(questions):
+        for q in tqdm(data):
             question = q["question"]
-            gold_docs = q["source_documents"]
+            gold = q["source_documents"]
             gt = q["ground_truth"]
             answerable = q["answerable"]
 
-            # Retrieve documents
+            # retrieval
             retrieved = retriever.get_relevant_documents(question)
-            topk = [d.metadata.get("source", "") for d in retrieved]
+            topk = [d.metadata["source"] for d in retrieved]
 
-            # Retrieval metrics
-            hr = hit_rate(topk, gold_docs)
-            rr = mrr(topk, gold_docs)
-            p = precision_at_k(topk, gold_docs)
+            # retrieval metrics
+            hr = hit_rate(topk, gold)
+            rr = mrr(topk, gold)
+            pk = precision_k(topk, gold)
 
-            # Build context and generate answer
-            context = "\n\n".join([d.page_content for d in retrieved])
-            prompt = f"Context:\n{context}\n\nQuestion: {question}\nAnswer:"
-
+            # answer generation
             if answerable:
-                pred = llm(prompt)
-                rl = rouge_l(gt, pred)
-                bl = bleu(gt, pred)
-                cs = cosine_sim(gt, pred)
+                context = "\n\n".join([d.page_content for d in retrieved])
+                prompt = f"Context:\n{context}\n\nQuestion: {question}\nAnswer:"
+                ans = llm(prompt)
+                rl = rouge_l(gt, ans)
+                bl = bleu(gt, ans)
+                cs = cosine(gt, ans)
             else:
-                pred = ""
-                rl = bl = cs = 0
+                ans = ""
+                rl = bl = cs = 0.0
 
-            config_results.append({
+            results.append({
                 "id": q["id"],
                 "question": question,
-                "gold_docs": gold_docs,
+                "gold_docs": gold,
+                "topk": topk,
                 "retrieval": {
                     "hit_rate": hr,
                     "mrr": rr,
-                    "precision": p
+                    "precision@k": pk
                 },
-                "generated_answer": pred,
+                "answer": ans,
                 "metrics": {
-                    "rouge_l": rl,
+                    "rougeL": rl,
                     "bleu": bl,
                     "cosine": cs
                 }
             })
 
-        final_results[name] = config_results
+        final[name] = results
 
-    with open(RESULTS_JSON, "w", encoding="utf-8") as f:
-        json.dump(final_results, f, indent=2)
+    with open(RESULTS_FILE, "w", encoding="utf-8") as f:
+        json.dump(final, f, indent=2)
 
-    print("Saved:", RESULTS_JSON)
+    print("\n✔ Saved:", RESULTS_FILE)
 
 
-# Run evaluation
+# CLI Entry
+
 if __name__ == "__main__":
-    evaluate()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--use-ollama", action="store_true")
+    args = parser.parse_args()
 
+    evaluate(use_ollama=args.use_ollama)
