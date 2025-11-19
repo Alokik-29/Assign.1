@@ -1,15 +1,23 @@
-from langchain.document_loaders import TextLoader
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import Chroma
+# LangChain v1 compatible imports
 
+# Document loader, embeddings, vectorstore
+from langchain_community.document_loaders import TextLoader
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.vectorstores import Chroma
+
+# Text splitter
 from langchain_text_splitters import CharacterTextSplitter
 
+# Core prompts & chains
 from langchain_core.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 
+# HuggingFace LLM pipeline wrapper
 from langchain_community.llms import HuggingFacePipeline
 
+# Ollama LLM
 from langchain_ollama import OllamaLLM
+
 
 SPEECH_FILE = "speech.txt"
 EMBED_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
