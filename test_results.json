@@ -1,0 +1,1733 @@
+{
+  "small": [
+    {
+      "id": 1,
+      "question": "What is the real remedy for caste system according to Document 1?",
+      "gold_docs": [
+        "speech1.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech5.txt",
+        "speech2.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " The document suggests that Ambedkar believed the real remedy for the caste system was its abolition, as he argued it destroyed unity, equality, and fraternity; prevented social mobility and encouraged discrimination; and denied basic human rights and dignity to millions of people. However, the text does not explicitly state a specific method or reform for achieving this abolition.",
+      "metrics": {
+        "rougeL": 0.16666666666666663,
+        "bleu": 0.00941475678741239,
+        "cosine": 0.35386767983436584
+      }
+    },
+    {
+      "id": 2,
+      "question": "What does Ambedkar say about the Buddha\u2019s view on rituals in Document 2?",
+      "gold_docs": [
+        "speech2.txt"
+      ],
+      "topk": [
+        "speech2.txt",
+        "speech6.txt",
+        "speech5.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "precision@k": 0.3333333333333333
+      },
+      "answer": " The text provided does not contain any information about Ambedkar's views on the Buddha's view on rituals in Document 2. The text is focused on Ambedkar's beliefs regarding progress, critical thinking, questioning blind traditions, scientific temper, reason, equality, and fraternity.",
+      "metrics": {
+        "rougeL": 0.13559322033898305,
+        "bleu": 0.005495155913866061,
+        "cosine": 0.5560624003410339
+      }
+    },
+    {
+      "id": 3,
+      "question": "What two types of constitutional remedies does Ambedkar mention in Document 3?",
+      "gold_docs": [
+        "speech3.txt"
+      ],
+      "topk": [
+        "speech5.txt",
+        "speech2.txt",
+        "speech4.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " The text provided does not directly mention any specific constitutional remedies attributed to Dr. B.R. Ambedkar from Document 3. However, as Ambedkar is known for his work on the Indian Constitution, some common constitutional remedies associated with him include writs such as Habeas Corpus, Mandamus, Prohibition, Certiorari, and Quo Warranto, which are enshrined in Part III of the Indian Constitution under the Fundamental Rights chapter.",
+      "metrics": {
+        "rougeL": 0.07692307692307693,
+        "bleu": 0.007447938959763117,
+        "cosine": 0.306388258934021
+      }
+    },
+    {
+      "id": 4,
+      "question": "What personal experiences of untouchability does Ambedkar describe in Document 4?",
+      "gold_docs": [
+        "speech4.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech6.txt",
+        "speech1.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " The provided text doesn't contain specific descriptions of Ambedkar's personal experiences of untouchability from Document 4. However, it does emphasize that Ambedkar believed caste-based discrimination was the biggest obstacle to national unity and development, indicating his personal experience or understanding of this issue as a member of the Dalit (formerly known as \"untouchable\") caste in India. For more detailed accounts of Ambedkar's experiences with untouchability, it would be beneficial to read other works by or about him.",
+      "metrics": {
+        "rougeL": 0.061224489795918366,
+        "bleu": 0.0031001377289059245,
+        "cosine": 0.2786191999912262
+      }
+    },
+    {
+      "id": 5,
+      "question": "Why does Ambedkar believe Pakistan\u2019s creation was inevitable in Document 5?",
+      "gold_docs": [
+        "speech5.txt"
+      ],
+      "topk": [
+        "speech2.txt",
+        "speech4.txt",
+        "speech1.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " The provided text does not mention anything about Ambedkar's beliefs regarding the inevitability of Pakistan's creation. Document 5 is likely not related to this question as it focuses on Ambedkar's thoughts about India's caste system, progress, and society. For information about Ambedkar's views on Pakistan's creation, you may want to refer to other sources or documents that specifically address this topic.",
+      "metrics": {
+        "rougeL": 0.022727272727272728,
+        "bleu": 0.002989232719814957,
+        "cosine": 0.3249078392982483
+      }
+    },
+    {
+      "id": 6,
+      "question": "Who does Ambedkar call \u2018broken men\u2019 in Document 6 and why?",
+      "gold_docs": [
+        "speech6.txt"
+      ],
+      "topk": [
+        "speech6.txt",
+        "speech4.txt",
+        "speech5.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "precision@k": 0.3333333333333333
+      },
+      "answer": " In the context provided, there is no direct reference to Ambedkar calling anyone 'broken men' in Document 6. The information given refers to his work on gender equality and promoting a society based on equality, justice, and human dignity, but does not mention any specific term like 'broken men.' It would be beneficial to refer to Document 6 or other sources directly attributed to Ambedkar to find the context for this statement.",
+      "metrics": {
+        "rougeL": 0.047058823529411764,
+        "bleu": 0.003000012090121809,
+        "cosine": 0.2396484762430191
+      }
+    },
+    {
+      "id": 7,
+      "question": "Compare Ambedkar\u2019s views on education in Documents 4 and 6",
+      "gold_docs": [
+        "speech4.txt",
+        "speech6.txt"
+      ],
+      "topk": [
+        "speech5.txt",
+        "speech6.txt",
+        "speech3.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "precision@k": 0.3333333333333333
+      },
+      "answer": " In both Document 4 and Document 6, Ambedkar emphasizes the importance of education in empowering people and fighting against oppression. However, there are some key differences in their presentations:\n\n1. In Document 4, Ambedkar's views on education are more broadly discussed within the context of his overall philosophy. He explicitly states that education gives people the confidence and ability to question injustice, and that it is a powerful tool for social transformation.\n\n2. In Document 6, Ambedkar's famous message \"Educate, Agitate, Organize\" is highlighted, which encapsulates his views on action alongside education. Here, he stresses the need not only to educate but also to agitate (protest) and organize (form collective actions) for social change.\n\n3. Both documents acknowledge that Ambedkar particularly encouraged the oppressed classes to seek education as a means of improving their circumstances. However, Document 6 goes further in explaining how Ambedkar himself overcame discrimination through knowledge and hard work, becoming a highly educated leader.\n\nIn summary, while both documents reflect Ambedkar's belief in the transformative power of education, Document 4 offers a more comprehensive overview of his views on education, whereas Document 6 focuses on his famous message emphasizing action alongside education.",
+      "metrics": {
+        "rougeL": 0.11764705882352944,
+        "bleu": 0.00961881543835013,
+        "cosine": 0.5928276777267456
+      }
+    },
+    {
+      "id": 8,
+      "question": "What is Ambedkar\u2019s concept of ideal society across Documents 1 and 3?",
+      "gold_docs": [
+        "speech1.txt",
+        "speech3.txt"
+      ],
+      "topk": [
+        "speech4.txt",
+        "speech4.txt",
+        "speech1.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.3333333333333333,
+        "precision@k": 0.3333333333333333
+      },
+      "answer": " Ambedkar's concept of an ideal society, as depicted in Documents 1 and 3, is one that is based on equality, justice, and human dignity. He envisioned a society where every individual, regardless of caste, class, or gender, has equal rights and opportunities. This society would be built through both legal reforms and social awakening. In this ideal society, the law would provide equal rights, but society would also develop compassion, understanding, and respect for all its members, thus ensuring social justice.",
+      "metrics": {
+        "rougeL": 0.14893617021276598,
+        "bleu": 0.006226064817025479,
+        "cosine": 0.37781959772109985
+      }
+    },
+    {
+      "id": 9,
+      "question": "How does Ambedkar relate political power to social change in Documents 3 and 6?",
+      "gold_docs": [
+        "speech3.txt",
+        "speech6.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech5.txt",
+        "speech1.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "precision@k": 0.3333333333333333
+      },
+      "answer": " In Documents 3 and 6, Ambedkar relates political power to social change by emphasizing that social reform must come before political reform. He argues that political freedom has no value if society remains unequal, suggesting that while gaining political power is important, it is equally crucial to address the societal inequalities and discrimination that exist within the country. Thus, he advocates for social reform as a necessary prerequisite for meaningful political change. Additionally, Ambedkar's work towards introducing reforms for uplifting marginalized communities, his fight against caste discrimination, and his focus on equality and human rights demonstrate his belief in the interconnection between political power and social change.",
+      "metrics": {
+        "rougeL": 0.128,
+        "bleu": 0.01031107482857418,
+        "cosine": 0.49030667543411255
+      }
+    },
+    {
+      "id": 10,
+      "question": "What was Ambedkar\u2019s favorite food?",
+      "gold_docs": [],
+      "topk": [
+        "speech3.txt",
+        "speech2.txt",
+        "speech2.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": "",
+      "metrics": {
+        "rougeL": 0.0,
+        "bleu": 0.0,
+        "cosine": 0.0
+      }
+    },
+    {
+      "id": 11,
+      "question": "When did Ambedkar visit the United States?",
+      "gold_docs": [],
+      "topk": [
+        "speech2.txt",
+        "speech5.txt",
+        "speech4.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": "",
+      "metrics": {
+        "rougeL": 0.0,
+        "bleu": 0.0,
+        "cosine": 0.0
+      }
+    },
+    {
+      "id": 12,
+      "question": "What is the Dhamma according to Document 2?",
+      "gold_docs": [
+        "speech2.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech1.txt",
+        "speech1.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " The Dhamma (or Dharma) according to Document 2 refers to the principles of justice, liberty, equality, and human rights as advocated by B.R. Ambedkar. It also emphasizes the importance of cultivating one's mind through education for societal progress and ensuring equality.",
+      "metrics": {
+        "rougeL": 0.18518518518518515,
+        "bleu": 0.006369304104455854,
+        "cosine": 0.35416221618652344
+      }
+    },
+    {
+      "id": 13,
+      "question": "What analogy does Ambedkar use for social reform in Document 1?",
+      "gold_docs": [
+        "speech1.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech5.txt",
+        "speech4.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " Ambedkar does not explicitly use an analogy for social reform in the provided context. However, if we interpret his idea that \"political freedom has no value if society remains unequal,\" it can be implied that he views political freedom as a foundation (a base or structure) and social reform as what gives it substance or value (making it equal and fair). But this is an inference rather than an explicit analogy.",
+      "metrics": {
+        "rougeL": 0.04878048780487806,
+        "bleu": 0.003367842053959438,
+        "cosine": 0.06345020234584808
+      }
+    },
+    {
+      "id": 14,
+      "question": "What fundamental rights does Ambedkar mention in Document 3?",
+      "gold_docs": [
+        "speech3.txt"
+      ],
+      "topk": [
+        "speech5.txt",
+        "speech4.txt",
+        "speech5.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " The text does not provide specific references to a Document 3 or any particular list of fundamental rights attributed to Dr. B. R. Ambedkar. However, it is well-known that Dr. Ambedkar played a crucial role in drafting the Indian Constitution, which includes several fundamental rights for all citizens, such as the right to equality, freedom of speech and expression, freedom of religion, and the right against exploitation.",
+      "metrics": {
+        "rougeL": 0.1951219512195122,
+        "bleu": 0.0106874671588704,
+        "cosine": 0.5009890794754028
+      }
+    },
+    {
+      "id": 15,
+      "question": "How did Ambedkar struggle for education according to Document 4?",
+      "gold_docs": [
+        "speech4.txt"
+      ],
+      "topk": [
+        "speech5.txt",
+        "speech3.txt",
+        "speech6.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " According to Document 4, Ambedkar struggled for education by emphasizing its importance as a tool for social transformation. He believed that educating the oppressed was the key to freeing them from centuries of injustice. He encouraged everyone, especially the oppressed classes, to seek education to build a better future. His own journey of overcoming discrimination through knowledge and hard work exemplified his belief in the power of education. Furthermore, he advocated for a philosophy that involved educating, agitating, and organizing.",
+      "metrics": {
+        "rougeL": 0.06185567010309278,
+        "bleu": 0.002694212814112345,
+        "cosine": 0.33129197359085083
+      }
+    },
+    {
+      "id": 16,
+      "question": "What does Ambedkar say about the unity of India in Document 5?",
+      "gold_docs": [
+        "speech5.txt"
+      ],
+      "topk": [
+        "speech5.txt",
+        "speech3.txt",
+        "speech1.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "precision@k": 0.3333333333333333
+      },
+      "answer": " In Document 5, Ambedkar argues that caste is the biggest obstacle to India's unity and growth. He states that caste destroys the spirit of liberty, equality, and fraternity; divides people, discourages cooperation, and creates social barriers that prevent national development.",
+      "metrics": {
+        "rougeL": 0.16949152542372883,
+        "bleu": 0.006909792747415067,
+        "cosine": 0.3583916425704956
+      }
+    },
+    {
+      "id": 17,
+      "question": "What solution does Ambedkar propose for untouchables in Document 6?",
+      "gold_docs": [
+        "speech6.txt"
+      ],
+      "topk": [
+        "speech1.txt",
+        "speech3.txt",
+        "speech4.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " In Document 6, Ambedkar proposes a series of solutions to address the issue of untouchability. Here are some key points from his speech \"The Annihilation of Caste\":\n\n1. Education: He strongly advocated for education as a means to uplift the untouchables and equip them with knowledge and skills to challenge the caste system.\n\n2. Separate electorates: Ambedkar proposed separate electorates for depressed classes (now referred to as Dalits) at the time of independence, arguing that this would ensure fair representation in political decision-making processes.\n\n3. Land reforms: He emphasized the need for land reforms to provide equal opportunities for agricultural production and ownership among all castes, especially untouchables who traditionally had no access to land or resources.\n\n4. Legal protection: Ambedkar believed that legal protections were essential to safeguard the rights of the downtrodden against discrimination and violence. He advocated for strong anti-discrimination laws and effective enforcement mechanisms.\n\n5. Cultural change: Beyond legal reforms, Ambedkar emphasized the importance of cultural change and social awakening in society, promoting compassion, understanding, and respect for all its members as key to achieving true social justice. He called on upper castes to acknowledge their privileges and work towards dismantling the caste system.\n\n6. Self-respect: Ambedkar placed a great emphasis on fostering self-respect among the untouchables, encouraging them to stand up for their rights and demand equality. He believed that only by asserting their own dignity could they challenge the oppressive caste hierarchy.",
+      "metrics": {
+        "rougeL": 0.047244094488188976,
+        "bleu": 0.0018909877077734785,
+        "cosine": 0.45463815331459045
+      }
+    },
+    {
+      "id": 18,
+      "question": "Compare the concept of \u2018enemy\u2019 in Documents 1 and 6",
+      "gold_docs": [
+        "speech1.txt",
+        "speech6.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech2.txt",
+        "speech5.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " In Document 1, the term 'enemy' is not explicitly mentioned. However, it can be inferred that Ambedkar might have considered the caste system, discrimination, and social inequality as enemies that need to be fought against for achieving true equality.\n\nIn Document 6, the enemy refers specifically to the British colonial rule and their policies, which were seen as oppressive and exploitative by Ambedkar and other freedom fighters. While there is a difference in the specific entity identified as the enemy, both documents share a common theme of fighting against oppressive structures to achieve social justice and equality.",
+      "metrics": {
+        "rougeL": 0.23728813559322032,
+        "bleu": 0.07139040261766776,
+        "cosine": 0.6470385193824768
+      }
+    },
+    {
+      "id": 19,
+      "question": "How does Ambedkar\u2019s view on religion differ between Documents 2 and 5?",
+      "gold_docs": [
+        "speech2.txt",
+        "speech5.txt"
+      ],
+      "topk": [
+        "speech2.txt",
+        "speech5.txt",
+        "speech6.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "precision@k": 0.6666666666666666
+      },
+      "answer": " In Documents 2, Ambedkar's view on religion seems to be critical and reformative. He emphasizes the need for people to question blind faith and superstitions, suggesting a move towards rational thinking over traditional beliefs. However, he does not explicitly call for abandoning religion itself but rather the outdated customs and traditions that promote inequality within religious practices.\n\nIn Document 5 (which isn't provided in your message), Ambedkar is reported to have stated that \"Gods, religions, religious books, and religious ceremonies, all are man-made, not God-made.\" This statement suggests a more radical rejection of religion as a human construct rather than a divine one. So, the view on religion seems to be more critical and dismissive in Document 5 compared to Document 2 where Ambedkar focuses on reforming religious practices rather than rejecting religion entirely.",
+      "metrics": {
+        "rougeL": 0.12195121951219513,
+        "bleu": 0.0049160660555821,
+        "cosine": 0.4927034378051758
+      }
+    },
+    {
+      "id": 20,
+      "question": "What is the relationship between education and liberation in Ambedkar\u2019s philosophy?",
+      "gold_docs": [
+        "speech4.txt",
+        "speech6.txt"
+      ],
+      "topk": [
+        "speech6.txt",
+        "speech5.txt",
+        "speech3.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "precision@k": 0.3333333333333333
+      },
+      "answer": " In Ambedkar's philosophy, education plays a crucial role in the process of liberation. He believed that education empowers individuals to question, challenge, and ultimately overcome oppression. By providing knowledge and critical thinking skills, education enables people, especially those from marginalized communities, to fight against centuries of injustice and build a more equitable society. Ambedkar's own life serves as an example of how education can serve as a tool for personal liberation and social transformation.",
+      "metrics": {
+        "rougeL": 0.13186813186813187,
+        "bleu": 0.006827338823907791,
+        "cosine": 0.7080903053283691
+      }
+    },
+    {
+      "id": 21,
+      "question": "What year was Ambedkar born?",
+      "gold_docs": [],
+      "topk": [
+        "speech2.txt",
+        "speech2.txt",
+        "speech5.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": "",
+      "metrics": {
+        "rougeL": 0.0,
+        "bleu": 0.0,
+        "cosine": 0.0
+      }
+    },
+    {
+      "id": 22,
+      "question": "What specific restrictions did untouchables face according to Document 4?",
+      "gold_docs": [
+        "speech4.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech4.txt",
+        "speech1.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "precision@k": 0.3333333333333333
+      },
+      "answer": " The document does not provide explicit details about the specific restrictions faced by untouchables. However, it is generally understood that the caste system in India, which Ambedkar strongly opposed, imposed severe social, economic, and cultural restrictions on the untouchables (often referred to as Dalits). These restrictions included segregation in housing, food, water, education, employment, and religious practices. They were often denied access to public spaces, and inter-caste marriages were forbidden. It is this system of discrimination that Ambedkar worked tirelessly to eradicate.",
+      "metrics": {
+        "rougeL": 0.09900990099009901,
+        "bleu": 0.0033036080347657133,
+        "cosine": 0.4456583261489868
+      }
+    },
+    {
+      "id": 23,
+      "question": "How does Ambedkar define social democracy in Document 3?",
+      "gold_docs": [
+        "speech3.txt"
+      ],
+      "topk": [
+        "speech2.txt",
+        "speech6.txt",
+        "speech4.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " According to Document 3, Ambedkar defines social democracy as a way of life that recognizes liberty, equality, and fraternity as essential principles.",
+      "metrics": {
+        "rougeL": 0.6285714285714286,
+        "bleu": 0.21626010675918345,
+        "cosine": 0.5413126349449158
+      }
+    },
+    {
+      "id": 24,
+      "question": "What does Ambedkar say about the Constitution in Document 3?",
+      "gold_docs": [
+        "speech3.txt"
+      ],
+      "topk": [
+        "speech5.txt",
+        "speech2.txt",
+        "speech1.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " In Document 3, Dr. B. R. Ambedkar states that the Indian Constitution is the \"longest written constitution of any country in the world\" and it is also a \"preamble to a revolution.\" He emphasizes the importance of the Constitution as a tool for social, economic, and political justice, ensuring equality, liberty, and fraternity for all citizens. Ambedkar also highlights the role of the Constitution in protecting individual rights and promoting a sense of brotherhood among all Indians.",
+      "metrics": {
+        "rougeL": 0.14432989690721648,
+        "bleu": 0.0038315560661825857,
+        "cosine": 0.26800739765167236
+      }
+    },
+    {
+      "id": 25,
+      "question": "How does Ambedkar characterize the Hindu-Muslim problem in Document 5?",
+      "gold_docs": [
+        "speech5.txt"
+      ],
+      "topk": [
+        "speech1.txt",
+        "speech4.txt",
+        "speech6.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " The text provided does not directly mention or discuss the Hindu-Muslim problem specifically in Document 5. It primarily focuses on Dr. Ambedkar's views on caste, social justice, and democracy. To find information about Ambedkar's characterization of the Hindu-Muslim problem, one would need to refer to other sources or documents where this issue is addressed by him.",
+      "metrics": {
+        "rougeL": 0.05333333333333334,
+        "bleu": 0.004295119260690564,
+        "cosine": 0.2867261469364166
+      }
+    }
+  ],
+  "medium": [
+    {
+      "id": 1,
+      "question": "What is the real remedy for caste system according to Document 1?",
+      "gold_docs": [
+        "speech1.txt"
+      ],
+      "topk": [
+        "speech4.txt",
+        "speech3.txt",
+        "speech5.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " The real remedy for the caste system according to Document 1 (presumably a text or speech by Ambedkar) involves both legal reforms and social awakening. Legal reforms would provide equal rights, but true progress requires society to develop compassion, understanding, and respect for all its members. Ambedkar also argues that the caste system denies people their basic human rights, divides society, discourages cooperation, and prevents national development, hence it should be abolished.",
+      "metrics": {
+        "rougeL": 0.11627906976744186,
+        "bleu": 0.014847755848337078,
+        "cosine": 0.3637910485267639
+      }
+    },
+    {
+      "id": 2,
+      "question": "What does Ambedkar say about the Buddha\u2019s view on rituals in Document 2?",
+      "gold_docs": [
+        "speech2.txt"
+      ],
+      "topk": [
+        "speech2.txt",
+        "speech6.txt",
+        "speech5.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "precision@k": 0.3333333333333333
+      },
+      "answer": " The text provided doesn't directly mention or discuss Ambedkar's interpretation of Buddha's view on rituals. It primarily focuses on Ambedkar's own views on critical thinking, scientific temper, and modern values. To answer the question about Ambedkar's perspective on the Buddha's view on rituals, one would need a specific reference or document where this information is discussed.",
+      "metrics": {
+        "rougeL": 0.10256410256410256,
+        "bleu": 0.00388107836970323,
+        "cosine": 0.5214593410491943
+      }
+    },
+    {
+      "id": 3,
+      "question": "What two types of constitutional remedies does Ambedkar mention in Document 3?",
+      "gold_docs": [
+        "speech3.txt"
+      ],
+      "topk": [
+        "speech5.txt",
+        "speech5.txt",
+        "speech3.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.3333333333333333,
+        "precision@k": 0.3333333333333333
+      },
+      "answer": " The text provided does not explicitly mention any specific constitutional remedies that Dr. Ambedkar mentions in Document 3. The text primarily focuses on his efforts towards social reform and equality, but it doesn't delve into the details of constitutional remedies he might have proposed or included in the Indian Constitution. To find the exact types of constitutional remedies mentioned by Dr. Ambedkar, one would need to refer specifically to Document 3 or another source that discusses the constitutional reforms he implemented.",
+      "metrics": {
+        "rougeL": 0.02127659574468085,
+        "bleu": 0.002660316597295732,
+        "cosine": 0.2378152459859848
+      }
+    },
+    {
+      "id": 4,
+      "question": "What personal experiences of untouchability does Ambedkar describe in Document 4?",
+      "gold_docs": [
+        "speech4.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech3.txt",
+        "speech1.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " The text provided doesn't contain specific personal experiences of untouchability described by Ambedkar. It highlights his philosophies and contributions, focusing on social reform, justice, liberty, equality, democracy, and the importance of social justice. To find accounts of Ambedkar's personal experiences with untouchability, one might refer to other works such as \"Annihilation of Caste\" or \"The Untouchables: Who Were the Shudras?\" which detail his experiences growing up as a Dalit in India.",
+      "metrics": {
+        "rougeL": 0.044444444444444446,
+        "bleu": 0.0025590065762365363,
+        "cosine": 0.31749409437179565
+      }
+    },
+    {
+      "id": 5,
+      "question": "Why does Ambedkar believe Pakistan\u2019s creation was inevitable in Document 5?",
+      "gold_docs": [
+        "speech5.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech4.txt",
+        "speech1.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " The provided context doesn't contain information about Ambedkar's views on the inevitability of Pakistan's creation. Document 5 is not mentioned, so it is impossible to answer this question based on the given information.",
+      "metrics": {
+        "rougeL": 0.0,
+        "bleu": 0,
+        "cosine": 0.3014349937438965
+      }
+    },
+    {
+      "id": 6,
+      "question": "Who does Ambedkar call \u2018broken men\u2019 in Document 6 and why?",
+      "gold_docs": [
+        "speech6.txt"
+      ],
+      "topk": [
+        "speech6.txt",
+        "speech4.txt",
+        "speech4.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "precision@k": 0.3333333333333333
+      },
+      "answer": " In the provided context, there is no mention of Dr. B. R. Ambedkar calling anyone \"broken men\" in Document 6. The provided text only discusses his advocacy for equality, justice, and human dignity without any reference to broken men or a specific document. If you have access to Document 6 or more information about it, I would be happy to help explain that further if needed.",
+      "metrics": {
+        "rougeL": 0.05063291139240506,
+        "bleu": 0.003279163301859273,
+        "cosine": 0.2010839581489563
+      }
+    },
+    {
+      "id": 7,
+      "question": "Compare Ambedkar\u2019s views on education in Documents 4 and 6",
+      "gold_docs": [
+        "speech4.txt",
+        "speech6.txt"
+      ],
+      "topk": [
+        "speech5.txt",
+        "speech6.txt",
+        "speech6.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "precision@k": 0.6666666666666666
+      },
+      "answer": " Both Document 4 and Document 6 reflect Ambedkar's strong belief in the transformative power of education. In both documents, he emphasizes that education empowers people to question oppression and fight for justice. However, there are some differences in emphasis between the two passages:\n\n1. Document 4 focuses more on the individual level, highlighting how education gives individuals confidence and ability to question injustice. It also mentions Ambedkar's encouragement to seek education and build a better future.\n\n2. Document 6 expands upon this by emphasizing the role of education in promoting a scientific temperament and reliance on reason rather than tradition. It also highlights Ambedkar's call for people to question blind beliefs, superstitions, and customs that promote inequality, and embrace modern values.\n\nOverall, both documents reflect Ambedkar's vision of education as a means to empower individuals and promote social change, but Document 6 provides a more comprehensive view of his philosophy by discussing the role of education in challenging traditional beliefs and promoting scientific reasoning.",
+      "metrics": {
+        "rougeL": 0.10471204188481674,
+        "bleu": 0.0018954727341573354,
+        "cosine": 0.6689461469650269
+      }
+    },
+    {
+      "id": 8,
+      "question": "What is Ambedkar\u2019s concept of ideal society across Documents 1 and 3?",
+      "gold_docs": [
+        "speech1.txt",
+        "speech3.txt"
+      ],
+      "topk": [
+        "speech1.txt",
+        "speech3.txt",
+        "speech4.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "precision@k": 0.6666666666666666
+      },
+      "answer": " Ambedkar's concept of an ideal society, as depicted in Documents 1 and 3, is a society that is just, equal, and humane for all its citizens. This society is achieved through a combination of legal reforms and social awakening. The legal reforms ensure equal rights for every individual, while the social awakening fosters compassion, understanding, and respect among people. In this ideal society, democracy is not just a form of government but a way of life that nurtures equality and dignity. Ambedkar also believed in standing up against injustice, challenging outdated customs, and embracing modern values. He stressed the importance of social reform before political reform, as political freedom has no value if society remains unequal. Furthermore, his contributions to India's Constitution aimed to ensure justice, liberty, and equality for every citizen. His message continues to inspire people across the world to fight for dignity and human rights.",
+      "metrics": {
+        "rougeL": 0.0617283950617284,
+        "bleu": 0.0032278810633612756,
+        "cosine": 0.44065195322036743
+      }
+    },
+    {
+      "id": 9,
+      "question": "How does Ambedkar relate political power to social change in Documents 3 and 6?",
+      "gold_docs": [
+        "speech3.txt",
+        "speech6.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech3.txt",
+        "speech5.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "precision@k": 0.6666666666666666
+      },
+      "answer": " In Documents 3 and 6, Dr. B.R. Ambedkar relates political power to social change by emphasizing that social reform must precede political reform. He argues that political freedom has no value if society remains unequal. This suggests that political power is a tool for achieving social change and equality, but the true impact of political power can only be felt when it leads to a more just and equal society. Furthermore, he underscores his commitment to uplifting marginalized communities through various reforms, which indicates a direct connection between political power and social change.",
+      "metrics": {
+        "rougeL": 0.14414414414414414,
+        "bleu": 0.01143948944953104,
+        "cosine": 0.48634546995162964
+      }
+    },
+    {
+      "id": 10,
+      "question": "What was Ambedkar\u2019s favorite food?",
+      "gold_docs": [],
+      "topk": [
+        "speech3.txt",
+        "speech2.txt",
+        "speech2.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": "",
+      "metrics": {
+        "rougeL": 0.0,
+        "bleu": 0.0,
+        "cosine": 0.0
+      }
+    },
+    {
+      "id": 11,
+      "question": "When did Ambedkar visit the United States?",
+      "gold_docs": [],
+      "topk": [
+        "speech2.txt",
+        "speech5.txt",
+        "speech5.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": "",
+      "metrics": {
+        "rougeL": 0.0,
+        "bleu": 0.0,
+        "cosine": 0.0
+      }
+    },
+    {
+      "id": 12,
+      "question": "What is the Dhamma according to Document 2?",
+      "gold_docs": [
+        "speech2.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech1.txt",
+        "speech1.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " The text does not explicitly mention any specific Dhamma as it refers to Dr. Bhimrao Ambedkar, a political leader who contributed to India's Constitution and worked towards social justice. However, if we interpret Dhamma in a broad sense, it could refer to his teachings, values, and principles such as the cultivation of mind (education), eradication of untouchability, opposition to the caste system, upliftment of backward classes, women empowerment, and fighting for dignity and human rights.",
+      "metrics": {
+        "rougeL": 0.13793103448275862,
+        "bleu": 0.003421983513939922,
+        "cosine": 0.2593787610530853
+      }
+    },
+    {
+      "id": 13,
+      "question": "What analogy does Ambedkar use for social reform in Document 1?",
+      "gold_docs": [
+        "speech1.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech3.txt",
+        "speech5.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " Ambedkar does not explicitly use an analogy for social reform in Document 1, but rather presents a logical argument stating the importance of social reform before political reform by asserting that political freedom has no value if society remains unequal.",
+      "metrics": {
+        "rougeL": 0.07843137254901962,
+        "bleu": 0.005495155913866061,
+        "cosine": 0.06515879184007645
+      }
+    },
+    {
+      "id": 14,
+      "question": "What fundamental rights does Ambedkar mention in Document 3?",
+      "gold_docs": [
+        "speech3.txt"
+      ],
+      "topk": [
+        "speech5.txt",
+        "speech5.txt",
+        "speech4.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " The text does not specifically mention any specific fundamental rights attributed to Dr. B.R. Ambedkar in Document 3. However, as the architect of the Indian Constitution, Ambedkar is widely recognized for his contributions in enshrining several fundamental rights in the Constitution, including the Right to Equality (Articles 14-18), Freedom of Religion (Article 25), Freedom of Speech and Expression (Article 19), and Life and Personal Liberty (Article 21).",
+      "metrics": {
+        "rougeL": 0.14457831325301204,
+        "bleu": 0.006828683443018744,
+        "cosine": 0.4693789482116699
+      }
+    },
+    {
+      "id": 15,
+      "question": "How did Ambedkar struggle for education according to Document 4?",
+      "gold_docs": [
+        "speech4.txt"
+      ],
+      "topk": [
+        "speech5.txt",
+        "speech3.txt",
+        "speech6.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " According to Document 4, Ambedkar struggled for education by advocating for its centrality in his mission, believing that it empowers people to question oppression and fight for justice. He encouraged everyone, especially the oppressed classes, to seek education as a means to build a better future. Furthermore, he emphasized educating the oppressed as the only way to free them from centuries of injustice, having overcome discrimination himself through knowledge and hard work. In addition, Ambedkar encouraged questioning blind beliefs and superstitions, promoting a scientific temperament and reason over tradition. His famous message to students was \"Educate, Agitate, Organize,\" implying the importance he placed on education as a tool for change and empowerment.",
+      "metrics": {
+        "rougeL": 0.046511627906976744,
+        "bleu": 0.0019138921131356967,
+        "cosine": 0.3422446846961975
+      }
+    },
+    {
+      "id": 16,
+      "question": "What does Ambedkar say about the unity of India in Document 5?",
+      "gold_docs": [
+        "speech5.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech5.txt",
+        "speech5.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "precision@k": 0.6666666666666666
+      },
+      "answer": " The text provided doesn't contain information directly related to Ambedkar's views on the unity of India in Document 5. The text primarily discusses his views on social reform, modern values, equality, and his contributions to India's Constitution. To answer a question about Ambedkar's views on the unity of India, one would need to refer to a different source or document that specifically addresses this topic in relation to Dr. B.R. Ambedkar.",
+      "metrics": {
+        "rougeL": 0.14893617021276595,
+        "bleu": 0.015061447540271632,
+        "cosine": 0.4476798176765442
+      }
+    },
+    {
+      "id": 17,
+      "question": "What solution does Ambedkar propose for untouchables in Document 6?",
+      "gold_docs": [
+        "speech6.txt"
+      ],
+      "topk": [
+        "speech1.txt",
+        "speech1.txt",
+        "speech3.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " In Document 6 (which isn't provided as part of the context you've given), Dr. Ambedkar proposed a radical solution for the untouchables, known today as Dalits. He advocated for their political empowerment through the establishment of separate electorates and reservations in education and government jobs. This was to counteract the centuries-old discrimination and social exclusion they had faced in Indian society. However, the specific document isn't mentioned, so this answer is based on Ambedkar's overall approach as a civil rights activist and statesman.",
+      "metrics": {
+        "rougeL": 0.08,
+        "bleu": 0.0030860166165309253,
+        "cosine": 0.4116048812866211
+      }
+    },
+    {
+      "id": 18,
+      "question": "Compare the concept of \u2018enemy\u2019 in Documents 1 and 6",
+      "gold_docs": [
+        "speech1.txt",
+        "speech6.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech2.txt",
+        "speech2.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " In Document 1 (the context provided), Ambedkar does not directly refer to an 'enemy' in the traditional sense. Instead, he emphasizes the need for social change to combat discrimination and inequality. His 'enemies' could be perceived as societal norms, mindsets, or systems that perpetuate discrimination and deny equal opportunities to all individuals.\n\nIn Document 6 (not provided), Ambedkar's 'enemy' is presumably the caste system, which he actively fought against throughout his life. The caste system is a social structure in India that discriminates based on birth, creating a hierarchical order of castes. Ambedkar aimed to dismantle this system and promote equal rights for all regardless of their caste.\n\nIn both documents, Ambedkar's 'enemies' are barriers to equality and social justice. However, the focus in Document 1 is more on societal norms and mindsets, while in Document 6, it is primarily on the institutionalized caste system.",
+      "metrics": {
+        "rougeL": 0.19047619047619047,
+        "bleu": 0.007054376028755843,
+        "cosine": 0.6311804056167603
+      }
+    },
+    {
+      "id": 19,
+      "question": "How does Ambedkar\u2019s view on religion differ between Documents 2 and 5?",
+      "gold_docs": [
+        "speech2.txt",
+        "speech5.txt"
+      ],
+      "topk": [
+        "speech2.txt",
+        "speech5.txt",
+        "speech5.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "precision@k": 1.0
+      },
+      "answer": " In Document 2, Ambedkar's view on religion seems to focus more on the need for critical thinking and questioning of blind traditions, as well as the importance of progress towards a society based on equality and fraternity. He emphasizes the necessity of abandoning outdated beliefs and embracing rational thinking in order to make progress.\n\nIn Document 5, there is no specific mention of religion, but it discusses Ambedkar's struggle against social injustice and his efforts towards the upliftment of the marginalized sections of society. However, his conversion from Buddhism to Hinduism (in Document 5) can be interpreted as a rejection of certain aspects of traditional Hinduism that he found discriminatory or oppressive. Therefore, while both documents reflect Ambedkar's desire for social progress and justice, Document 2 provides more insight into his views on religion specifically, emphasizing the need for rationality, questioning, and abandonment of outdated beliefs.",
+      "metrics": {
+        "rougeL": 0.13714285714285712,
+        "bleu": 0.012428064196962062,
+        "cosine": 0.6264888048171997
+      }
+    },
+    {
+      "id": 20,
+      "question": "What is the relationship between education and liberation in Ambedkar\u2019s philosophy?",
+      "gold_docs": [
+        "speech4.txt",
+        "speech6.txt"
+      ],
+      "topk": [
+        "speech6.txt",
+        "speech5.txt",
+        "speech6.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "precision@k": 0.6666666666666666
+      },
+      "answer": " In Ambedkar's philosophy, education plays a crucial role in promoting liberation by empowering individuals to question injustice and strive for social change. Through education, people gain knowledge, critical thinking skills, and the confidence needed to challenge oppressive systems and promote equality. The act of educating oneself is seen as a means of self-empowerment, which can then lead to collective action through agitation (protesting against injustice) and organization (building community structures for social change). Therefore, education is a key component in Ambedkar's vision of achieving liberation from social, economic, and political oppression.",
+      "metrics": {
+        "rougeL": 0.14678899082568805,
+        "bleu": 0.015391696105813786,
+        "cosine": 0.7086327075958252
+      }
+    },
+    {
+      "id": 21,
+      "question": "What year was Ambedkar born?",
+      "gold_docs": [],
+      "topk": [
+        "speech2.txt",
+        "speech2.txt",
+        "speech2.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": "",
+      "metrics": {
+        "rougeL": 0.0,
+        "bleu": 0.0,
+        "cosine": 0.0
+      }
+    },
+    {
+      "id": 22,
+      "question": "What specific restrictions did untouchables face according to Document 4?",
+      "gold_docs": [
+        "speech4.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech4.txt",
+        "speech1.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "precision@k": 0.3333333333333333
+      },
+      "answer": " Unfortunately, Document 4 is not provided in the context you've given. To answer your question accurately, I would need information from a source that discusses Dr. Ambedkar's work related to the specific restrictions faced by untouchables (Dalits). These restrictions historically included social isolation, limited access to education and jobs, discrimination in daily life, and other forms of oppression within the caste system in India.",
+      "metrics": {
+        "rougeL": 0.11904761904761905,
+        "bleu": 0.004024431001434524,
+        "cosine": 0.3764645457267761
+      }
+    },
+    {
+      "id": 23,
+      "question": "How does Ambedkar define social democracy in Document 3?",
+      "gold_docs": [
+        "speech3.txt"
+      ],
+      "topk": [
+        "speech2.txt",
+        "speech2.txt",
+        "speech6.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " In Document 3, Ambedkar defines social democracy as a way of life that recognizes liberty, equality, and fraternity as essential principles.",
+      "metrics": {
+        "rougeL": 0.6470588235294118,
+        "bleu": 0.22738612304909625,
+        "cosine": 0.5485481023788452
+      }
+    },
+    {
+      "id": 24,
+      "question": "What does Ambedkar say about the Constitution in Document 3?",
+      "gold_docs": [
+        "speech3.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech1.txt",
+        "speech5.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "precision@k": 0.3333333333333333
+      },
+      "answer": " Ambedkar emphasizes that his contributions to India's Constitution ensure justice, liberty, and equality for every citizen. He believes that the Constitution provides a way of life that nurtures equality and dignity, making democracy more than just a form of government.",
+      "metrics": {
+        "rougeL": 0.13114754098360656,
+        "bleu": 0.01286057341226582,
+        "cosine": 0.23532269895076752
+      }
+    },
+    {
+      "id": 25,
+      "question": "How does Ambedkar characterize the Hindu-Muslim problem in Document 5?",
+      "gold_docs": [
+        "speech5.txt"
+      ],
+      "topk": [
+        "speech1.txt",
+        "speech4.txt",
+        "speech5.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.3333333333333333,
+        "precision@k": 0.3333333333333333
+      },
+      "answer": " The text provided does not contain Document 5, so I cannot directly answer the question about Ambedkar's characterization of the Hindu-Muslim problem from that specific document. However, it is important to note that Ambedkar extensively discussed the issue of communalism (tension between religious groups) in India, including the Hindu-Muslim divide, in his writings and speeches.\n\nAmbedkar's stance on the Hindu-Muslim problem was one of equitable treatment for all religions and communities. He argued that both Hinduism and Islam had their share of positive and negative aspects and should not be judged as a whole. Ambedkar believed that it was important to address communal issues through understanding, dialogue, and legal reforms, rather than promoting divisive politics.\n\nIt is worth noting that there are several resources available online that discuss Ambedkar's views on the Hindu-Muslim problem in more detail, such as his writings in \"Annihilation of Caste\" and speeches like \"The Islam in India.\" These sources can provide a better understanding of Ambedkar's characterization of the Hindu-Muslim problem.",
+      "metrics": {
+        "rougeL": 0.042105263157894736,
+        "bleu": 0.0015288297550955985,
+        "cosine": 0.23991408944129944
+      }
+    }
+  ],
+  "large": [
+    {
+      "id": 1,
+      "question": "What is the real remedy for caste system according to Document 1?",
+      "gold_docs": [
+        "speech1.txt"
+      ],
+      "topk": [
+        "speech4.txt",
+        "speech4.txt",
+        "speech3.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " The real remedy for the caste system, according to Document 1, is its dismantlement at its roots. This can be achieved through both legal reforms and social awakening. Legal reforms provide equal rights, but social awakening requires society to develop compassion, understanding, and respect for all its members.",
+      "metrics": {
+        "rougeL": 0.16129032258064516,
+        "bleu": 0.02251479263122495,
+        "cosine": 0.4348662495613098
+      }
+    },
+    {
+      "id": 2,
+      "question": "What does Ambedkar say about the Buddha\u2019s view on rituals in Document 2?",
+      "gold_docs": [
+        "speech2.txt"
+      ],
+      "topk": [
+        "speech2.txt",
+        "speech6.txt",
+        "speech5.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "precision@k": 0.3333333333333333
+      },
+      "answer": " The text provided does not contain information about Ambedkar's views on the Buddha's view on rituals. The passage discusses Ambedkar's ideas about progress, questioning traditional beliefs, scientific temperament, reason, equality, and fraternity, but it does not mention the Buddha or his views on rituals.",
+      "metrics": {
+        "rougeL": 0.12698412698412698,
+        "bleu": 0.005508606419495829,
+        "cosine": 0.6083550453186035
+      }
+    },
+    {
+      "id": 3,
+      "question": "What two types of constitutional remedies does Ambedkar mention in Document 3?",
+      "gold_docs": [
+        "speech3.txt"
+      ],
+      "topk": [
+        "speech5.txt",
+        "speech5.txt",
+        "speech3.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.3333333333333333,
+        "precision@k": 0.3333333333333333
+      },
+      "answer": " The text does not explicitly mention any specific types of constitutional remedies attributed to Ambedkar in Document 3. However, as Dr. Ambedkar played a crucial role in the drafting and implementation of the Indian Constitution, it is well-known that he contributed significantly to establishing judicial review and directive principles as two important constitutional remedies in India. The exact phrases might not be found in Document 3, but these concepts are significant aspects of his work on the Indian Constitution.",
+      "metrics": {
+        "rougeL": 0.08695652173913045,
+        "bleu": 0.012904568792919267,
+        "cosine": 0.2957363426685333
+      }
+    },
+    {
+      "id": 4,
+      "question": "What personal experiences of untouchability does Ambedkar describe in Document 4?",
+      "gold_docs": [
+        "speech4.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech3.txt",
+        "speech1.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " The text provided does not contain any specific description of Ambedkar's personal experiences of untouchability from Document 4. The text primarily focuses on Ambedkar's beliefs about social reform, his contributions to the Indian Constitution, and his influence on the fight for dignity and human rights. To find information about Ambedkar's personal experiences of untouchability, one might need to refer to other documents or sources that detail his life experiences.",
+      "metrics": {
+        "rougeL": 0.0898876404494382,
+        "bleu": 0.003940018995721922,
+        "cosine": 0.2624121904373169
+      }
+    },
+    {
+      "id": 5,
+      "question": "Why does Ambedkar believe Pakistan\u2019s creation was inevitable in Document 5?",
+      "gold_docs": [
+        "speech5.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech4.txt",
+        "speech2.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " The text provided does not contain information about Ambedkar's views on the inevitability of Pakistan's creation. Dr. B.R. Ambedkar's focus in this context appears to be predominantly on India and social reform within the Indian society. There is no mention or indication of his opinions regarding the formation of Pakistan in Document 5.",
+      "metrics": {
+        "rougeL": 0.02564102564102564,
+        "bleu": 0.0034537838276078457,
+        "cosine": 0.2715311646461487
+      }
+    },
+    {
+      "id": 6,
+      "question": "Who does Ambedkar call \u2018broken men\u2019 in Document 6 and why?",
+      "gold_docs": [
+        "speech6.txt"
+      ],
+      "topk": [
+        "speech6.txt",
+        "speech4.txt",
+        "speech4.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "precision@k": 0.3333333333333333
+      },
+      "answer": " In the provided context, there is no reference to Dr. B. R. Ambedkar calling anyone 'broken men' in Document 6. The given passage only discusses his advocacy for equality, justice, and human dignity regardless of caste, class, or gender.",
+      "metrics": {
+        "rougeL": 0.07692307692307693,
+        "bleu": 0.005641822153183602,
+        "cosine": 0.23654621839523315
+      }
+    },
+    {
+      "id": 7,
+      "question": "Compare Ambedkar\u2019s views on education in Documents 4 and 6",
+      "gold_docs": [
+        "speech4.txt",
+        "speech6.txt"
+      ],
+      "topk": [
+        "speech5.txt",
+        "speech6.txt",
+        "speech6.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "precision@k": 0.6666666666666666
+      },
+      "answer": " In both Document 4 and Document 6, Ambedkar emphasizes the importance of education in empowering individuals to question oppression and fight for justice. He advocates for education as a means to foster critical thinking and challenge blind beliefs or superstitions. However, there are some differences in the language and emphasis between the two documents:\n\n1. Document 4 focuses on the role of education in giving people the confidence and ability to question injustice, while Document 6 adds that education also empowers individuals to build a better future.\n2. Document 6 includes Ambedkar's famous slogan \"Educate, Agitate, Organize,\" which is not mentioned in Document 4. The addition of this phrase suggests that Ambedkar saw education as a stepping stone towards activism and social change.\n3. Document 6 places more emphasis on the need to abandon customs that promote inequality and embrace modern values, while Document 4 does not explicitly mention this.\n\nOverall, both documents reflect Ambedkar's belief in the transformative power of education as a tool for social justice and progress.",
+      "metrics": {
+        "rougeL": 0.12307692307692307,
+        "bleu": 0.0034178879941220977,
+        "cosine": 0.639555811882019
+      }
+    },
+    {
+      "id": 8,
+      "question": "What is Ambedkar\u2019s concept of ideal society across Documents 1 and 3?",
+      "gold_docs": [
+        "speech1.txt",
+        "speech3.txt"
+      ],
+      "topk": [
+        "speech1.txt",
+        "speech1.txt",
+        "speech3.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "precision@k": 1.0
+      },
+      "answer": " Ambedkar's concept of an ideal society, as depicted in Documents 1 and 3, emphasizes a just, equal, and humane society for all citizens. He believed that every individual should have equal opportunities to grow, and he viewed democracy not merely as a form of government but as a way of life that fosters equality and dignity. He also stressed the importance of education in achieving this goal, stating that the cultivation of mind should be the ultimate aim of human existence.\n\nMoreover, Ambedkar urged people to stand up against injustice, challenge outdated customs, and embrace modern values. He believed that social reform must precede political reform, as political freedom has no value if society remains unequal. Furthermore, he highlighted the importance of justice, liberty, and equality for every citizen, which he ensured through his contributions to India's Constitution. His message continues to inspire people globally to fight for dignity and human rights.",
+      "metrics": {
+        "rougeL": 0.04819277108433735,
+        "bleu": 0.001766924470460392,
+        "cosine": 0.43775999546051025
+      }
+    },
+    {
+      "id": 9,
+      "question": "How does Ambedkar relate political power to social change in Documents 3 and 6?",
+      "gold_docs": [
+        "speech3.txt",
+        "speech6.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech3.txt",
+        "speech2.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "precision@k": 0.6666666666666666
+      },
+      "answer": " In Documents 3 and 6, Dr. Ambedkar relates political power to social change by emphasizing that political democracy cannot succeed without social democracy. He believes that social reform must come before political reform as political freedom has no value if society remains unequal (Document 3). He defines social democracy as a way of life that recognizes liberty, equality, and fraternity as essential principles (Document 6). According to him, without equality, liberty would be meaningless, and without fraternity, equality would not last (Document 6). Thus, Ambedkar suggests that political power should be used to bring about social change, ensuring justice, liberty, and equality for all citizens.",
+      "metrics": {
+        "rougeL": 0.13114754098360656,
+        "bleu": 0.004782145700448053,
+        "cosine": 0.5240444540977478
+      }
+    },
+    {
+      "id": 10,
+      "question": "What was Ambedkar\u2019s favorite food?",
+      "gold_docs": [],
+      "topk": [
+        "speech3.txt",
+        "speech2.txt",
+        "speech2.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": "",
+      "metrics": {
+        "rougeL": 0.0,
+        "bleu": 0.0,
+        "cosine": 0.0
+      }
+    },
+    {
+      "id": 11,
+      "question": "When did Ambedkar visit the United States?",
+      "gold_docs": [],
+      "topk": [
+        "speech2.txt",
+        "speech5.txt",
+        "speech5.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": "",
+      "metrics": {
+        "rougeL": 0.0,
+        "bleu": 0.0,
+        "cosine": 0.0
+      }
+    },
+    {
+      "id": 12,
+      "question": "What is the Dhamma according to Document 2?",
+      "gold_docs": [
+        "speech2.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech1.txt",
+        "speech1.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " The Dhamma, as referred to in the context, represents the teachings and philosophy of B.R. Ambedkar. These include values such as justice, liberty, equality, dignity, human rights, eradication of untouchability, caste system abolition, upliftment of backward classes, women empowerment, and the importance of education for progress and ensuring equality in society.",
+      "metrics": {
+        "rougeL": 0.09523809523809523,
+        "bleu": 0.0047291810340735615,
+        "cosine": 0.31011420488357544
+      }
+    },
+    {
+      "id": 13,
+      "question": "What analogy does Ambedkar use for social reform in Document 1?",
+      "gold_docs": [
+        "speech1.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech3.txt",
+        "speech5.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " Ambedkar doesn't directly use an analogy for social reform in Document 1. However, he emphasizes the importance of social reform coming before political reform by saying that political freedom has no value if society remains unequal, which could be interpreted as comparing society to a system where political freedom (freedom) is like a key that doesn't work in a lock (unequal society) unless the lock (society) is properly aligned or reformed first.",
+      "metrics": {
+        "rougeL": 0.07058823529411765,
+        "bleu": 0.003000012090121809,
+        "cosine": 0.08033224195241928
+      }
+    },
+    {
+      "id": 14,
+      "question": "What fundamental rights does Ambedkar mention in Document 3?",
+      "gold_docs": [
+        "speech3.txt"
+      ],
+      "topk": [
+        "speech5.txt",
+        "speech5.txt",
+        "speech4.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " The document provided does not specify any specific fundamental rights mentioned by Ambedkar. However, it is well-known that Dr. B. R. Ambedkar played a crucial role in drafting the Indian Constitution and ensuring its adoption, which includes provisions for various fundamental rights of citizens such as equality, freedom of speech, religion, life, personal liberty, and more.",
+      "metrics": {
+        "rougeL": 0.11267605633802817,
+        "bleu": 0.00388107836970323,
+        "cosine": 0.46571817994117737
+      }
+    },
+    {
+      "id": 15,
+      "question": "How did Ambedkar struggle for education according to Document 4?",
+      "gold_docs": [
+        "speech4.txt"
+      ],
+      "topk": [
+        "speech5.txt",
+        "speech3.txt",
+        "speech6.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " According to Document 4, Ambedkar struggled for education by advocating for it as a central mission. He believed that knowledge empowers people to fight against oppression and injustice. He encouraged everyone, especially the oppressed classes, to seek education and build a better future. Ambedkar saw education as the most powerful tool for social transformation, asserting that educating the oppressed was the only way to free them from centuries of injustice. Furthermore, he encouraged individuals to question blind beliefs and superstitions, develop a scientific temper, rely on reason rather than tradition, and abandon customs that promote inequality in favor of modern values. His famous message to students was \"Educate, Agitate, Organize.\" These actions suggest that Ambedkar's struggle for education encompassed promoting critical thinking, challenging oppressive systems, and advocating for modern values and scientific reasoning.",
+      "metrics": {
+        "rougeL": 0.039735099337748346,
+        "bleu": 0.0017797961322261206,
+        "cosine": 0.3364669680595398
+      }
+    },
+    {
+      "id": 16,
+      "question": "What does Ambedkar say about the unity of India in Document 5?",
+      "gold_docs": [
+        "speech5.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech5.txt",
+        "speech5.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "precision@k": 0.6666666666666666
+      },
+      "answer": " The text provided does not explicitly mention any statement by Ambedkar about the unity of India in Document 5. The document focuses on his advocacy for social reform, challenging outdated customs, promoting modern values, and ensuring justice, liberty, and equality for all citizens through his contributions to India's Constitution.",
+      "metrics": {
+        "rougeL": 0.1764705882352941,
+        "bleu": 0.022906501105326008,
+        "cosine": 0.4571675658226013
+      }
+    },
+    {
+      "id": 17,
+      "question": "What solution does Ambedkar propose for untouchables in Document 6?",
+      "gold_docs": [
+        "speech6.txt"
+      ],
+      "topk": [
+        "speech1.txt",
+        "speech1.txt",
+        "speech3.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " In Document 6, Ambedkar proposes a solution for the Untouchables by advocating for their social and educational upliftment. He suggests that untouchability should be abolished, and the Untouchables should be given equal opportunities to access education, employment, and public places. He also emphasizes the need for separate electorates for the Untouchables in order to ensure their representation in government, and for legal reforms to protect them from discrimination. Furthermore, he suggests that it is necessary to provide economic aid to the Untouchables until they can achieve self-reliance.",
+      "metrics": {
+        "rougeL": 0.060000000000000005,
+        "bleu": 0.0024735945764034315,
+        "cosine": 0.351315438747406
+      }
+    },
+    {
+      "id": 18,
+      "question": "Compare the concept of \u2018enemy\u2019 in Documents 1 and 6",
+      "gold_docs": [
+        "speech1.txt",
+        "speech6.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech2.txt",
+        "speech2.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " In Document 1 (the context provided), Ambedkar's \"enemy\" could be perceived as any form of discrimination, social inequality, or mindset that contradicts his belief in equality and respect for all humans. He was fighting against these structural and societal issues that hindered the achievement of true equality and justice.\n\nIn Document 6 (not provided), it is unclear who or what Ambedkar's \"enemy\" might have been, as no such document is specified in the question. However, based on his work and the context provided, it could be inferred that in other documents, Ambedkar might also refer to similar structural, societal, or mindset issues as his \"enemy.\" The common thread between the two instances would be Ambedkar's fight against anything that opposes his vision of equality, education, and social justice.",
+      "metrics": {
+        "rougeL": 0.19736842105263158,
+        "bleu": 0.006713164259156547,
+        "cosine": 0.5208458304405212
+      }
+    },
+    {
+      "id": 19,
+      "question": "How does Ambedkar\u2019s view on religion differ between Documents 2 and 5?",
+      "gold_docs": [
+        "speech2.txt",
+        "speech5.txt"
+      ],
+      "topk": [
+        "speech2.txt",
+        "speech5.txt",
+        "speech5.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "precision@k": 1.0
+      },
+      "answer": " In Document 2, Ambedkar's view on religion seems to focus more on questioning blind traditions, abandoning outdated beliefs, challenging blind faith, and moving towards a society based on equality and fraternity. This suggests that he may have been critical of certain religious practices or beliefs that he perceived as hindering progress or promoting inequality.\n\nIn Document 5, while there is no direct mention of religion, Ambedkar emphasizes the importance of scientific temperament and rational thinking. This implies a preference for evidence-based reasoning over blind faith or traditional beliefs, which could potentially include religious beliefs. However, without specific references to religion in Document 5, it's not entirely clear how his views on religion differ between the two documents. A more direct comparison would require texts where Ambedkar discusses religion explicitly in both documents.",
+      "metrics": {
+        "rougeL": 0.12422360248447205,
+        "bleu": 0.013198546160915791,
+        "cosine": 0.5108172297477722
+      }
+    },
+    {
+      "id": 20,
+      "question": "What is the relationship between education and liberation in Ambedkar\u2019s philosophy?",
+      "gold_docs": [
+        "speech4.txt",
+        "speech6.txt"
+      ],
+      "topk": [
+        "speech6.txt",
+        "speech6.txt",
+        "speech5.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "precision@k": 0.6666666666666666
+      },
+      "answer": " In Ambedkar's philosophy, education plays a significant role in the pursuit of liberation and the fight against discrimination. He saw education as a means to empower people, especially those from oppressed classes, by providing them with the confidence, ability, and knowledge to question injustice and strive for equality. This is why he emphasized the importance of \"Educate, Agitate, Organize\" as a call to action for students. Education, therefore, is closely linked to liberation in Ambedkar's philosophy because it empowers individuals to challenge oppression and work towards a just and equal society.",
+      "metrics": {
+        "rougeL": 0.1111111111111111,
+        "bleu": 0.005747584499385494,
+        "cosine": 0.6654961109161377
+      }
+    },
+    {
+      "id": 21,
+      "question": "What year was Ambedkar born?",
+      "gold_docs": [],
+      "topk": [
+        "speech2.txt",
+        "speech2.txt",
+        "speech2.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": "",
+      "metrics": {
+        "rougeL": 0.0,
+        "bleu": 0.0,
+        "cosine": 0.0
+      }
+    },
+    {
+      "id": 22,
+      "question": "What specific restrictions did untouchables face according to Document 4?",
+      "gold_docs": [
+        "speech4.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech4.txt",
+        "speech1.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "precision@k": 0.3333333333333333
+      },
+      "answer": " The document does not provide specific details about the restrictions faced by untouchables, as it is a summary about Dr. Ambedkar's philosophy and work rather than a historical account of untouchability. However, it is well-known that untouchables in India faced numerous social, economic, and cultural restrictions such as prohibition from entering temples, accessing common water sources, using public roads, attending schools, and intermingling with people from other castes. These are some examples of the systemic discrimination and exclusion they experienced under the caste system.",
+      "metrics": {
+        "rougeL": 0.07692307692307693,
+        "bleu": 0.0032235056715354577,
+        "cosine": 0.5401401519775391
+      }
+    },
+    {
+      "id": 23,
+      "question": "How does Ambedkar define social democracy in Document 3?",
+      "gold_docs": [
+        "speech3.txt"
+      ],
+      "topk": [
+        "speech2.txt",
+        "speech2.txt",
+        "speech6.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " Ambedkar defines social democracy as a way of life that recognizes liberty, equality, and fraternity as essential principles.",
+      "metrics": {
+        "rougeL": 0.7096774193548387,
+        "bleu": 0.2689054715066593,
+        "cosine": 0.5763940811157227
+      }
+    },
+    {
+      "id": 24,
+      "question": "What does Ambedkar say about the Constitution in Document 3?",
+      "gold_docs": [
+        "speech3.txt"
+      ],
+      "topk": [
+        "speech3.txt",
+        "speech1.txt",
+        "speech5.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "precision@k": 0.3333333333333333
+      },
+      "answer": " In Document 3, Ambedkar's contributions to India's Constitution are emphasized as ensuring justice, liberty, and equality for every citizen. This suggests that he viewed the Constitution as a means to uphold and promote these fundamental principles.",
+      "metrics": {
+        "rougeL": 0.06896551724137931,
+        "bleu": 0.006132910803680854,
+        "cosine": 0.23991677165031433
+      }
+    },
+    {
+      "id": 25,
+      "question": "How does Ambedkar characterize the Hindu-Muslim problem in Document 5?",
+      "gold_docs": [
+        "speech5.txt"
+      ],
+      "topk": [
+        "speech2.txt",
+        "speech1.txt",
+        "speech4.txt"
+      ],
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "precision@k": 0.0
+      },
+      "answer": " Unfortunately, the provided context does not include a reference to Document 5. Therefore, it is not possible to accurately determine how Dr. B. R. Ambedkar characterizes the Hindu-Muslim problem in Document 5 based on the given context. To answer this question, you would need access to Document 5 or additional information about its content and context.",
+      "metrics": {
+        "rougeL": 0.05555555555555556,
+        "bleu": 0.004295119260690564,
+        "cosine": 0.22049984335899353
+      }
+    }
+  ]
+}
