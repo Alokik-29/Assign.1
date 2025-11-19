@@ -49,10 +49,38 @@ Download from:
 curl -fsSL https://ollama.ai/install.sh | sh
 model
 
+### **2️⃣ Pull the Mistral Model
+ollama pull mistral
 
-👤 Author
+### **3️⃣ Clone the Repository
+
+### **4️⃣ Create Virtual Environment
+python -m venv venv
+then Activate it
+
+### **5️⃣ Install Dependencies
+pip install -r requirements.txt
+
+### **▶️ Running the Project
+✔ Using Ollama (Recommended)
+
+Runs fully locally using Mistral 7B:
+
+python main.py --use-ollama
+
+## 🛠 Tech Stack
+- **Python 3.10+**
+- **LangChain** (RAG pipeline)
+- **ChromaDB** (vector store)
+- **MiniLM-L6-v2** (embeddings)
+- **Ollama Mistral 7B** (primary LLM)
+- **Flan-T5-Small** (fallback LLM)
+
+
+##👤 Author
 
 Alokik Gour
 Kalpit Pvt Ltd — Intern Assignment
-GitHub: https://github.com/Alokik-29
-alokikgour29@gmail.com
+📧 Email: alokikgour29@gmail.com
+
+🔗 GitHub: https://github.com/Alokik-29
