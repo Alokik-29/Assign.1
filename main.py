@@ -1,4 +1,4 @@
-# --- LangChain v1 compatible imports ---
+# LangChain v1 imports
 
 # Loaders, embeddings, vectorstore
 from langchain_community.document_loaders import TextLoader
@@ -11,14 +11,15 @@ from langchain_text_splitters import CharacterTextSplitter
 # Prompts
 from langchain_core.prompts import PromptTemplate
 
-# RetrievalQA (moved to community in v1)
-from langchain_community.chains.retrieval import RetrievalQA
+# RetrievalQA (correct location in LC v1)
+from langchain.chains import RetrievalQA
 
-# HuggingFace LLM wrapper
+# HF pipeline wrapper
 from langchain_community.llms import HuggingFacePipeline
 
-# Ollama LLM
+# Ollama
 from langchain_ollama import OllamaLLM
+
 
 
 
